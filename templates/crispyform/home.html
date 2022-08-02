@@ -1,0 +1,22 @@
+<!-- templates/home.html-->
+{% extends 'crispyform/base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+<form method="post" class="my-class">
+    {{ form|crispy }}
+</form>
+
+
+<script>
+
+    var select_box_element = document.querySelector('#id_car_type');
+
+    dselect(select_box_element, {
+        search: true
+    });
+
+</script>
+{% endblock %}
